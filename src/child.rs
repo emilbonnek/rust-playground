@@ -2,7 +2,7 @@ use crate::parent::Parent;
 use serde::{Deserialize, Serialize};
 use std::{cell::RefCell, rc::Weak};
 
-#[derive(Debug, Serialize, Deserialize)]
+#[derive(Deserialize)]
 pub struct ChildDTO {
     pub id: u64,
     pub parent_id: u64,
