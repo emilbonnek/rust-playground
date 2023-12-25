@@ -36,7 +36,7 @@ pub struct ChildDTO {
     pub parent_id: u64,
 }
 ```
-Next I can implemnt Deserialization for the `Parent`.
+Next I can implement Deserialization for the `Parent`.
 However at the last step of the deserialization when I have to set up the references I am forced to give up ownership of the parent and so I can't return a `Parent`.
 ```rust
 if child.parent_id != id {
