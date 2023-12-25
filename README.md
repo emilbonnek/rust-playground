@@ -39,6 +39,7 @@ pub struct ChildDTO {
 Next I can implement Deserialization for the `Parent`.
 However at the last step of the deserialization when I have to set up the references I am forced to give up ownership of the parent and so I can't return a `Parent`.
 ```rust
+// (child is a a ChildDTO at this point)
 if child.parent_id != id {
     return Err(de::Error::custom("Parent id and child parent_id mismatch"));
 }
